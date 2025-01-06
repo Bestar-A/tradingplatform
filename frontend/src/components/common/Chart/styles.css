@@ -1,0 +1,29 @@
+.tradingview-widget-container {
+  position: relative;
+  background-color: #16171a;
+  border-radius: 4px;
+  overflow: hidden;
+  min-height: 400px;
+}
+
+.tradingview-widget-container__widget {
+  height: 100%;
+  width: 100%;
+}
+
+/* Hide TradingView branding if needed */
+iframe {
+  border: none !important;
+}
+
+/* Loading state */
+.tradingview-widget-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #16171a;
+  z-index: -1;
+}

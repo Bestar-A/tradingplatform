@@ -1,0 +1,289 @@
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 64px;
+  background-color: #16171a;
+  position: fixed;
+  z-index: 100;
+  align-self: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.nav-left,
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.action-button {
+  height: 50px;
+  background-image: linear-gradient(
+    to right,
+    rgb(142, 131, 251),
+    rgb(93, 82, 238)
+  );
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 15px;
+  margin-right: 10px;
+  font-size: 17px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: transform 0.2s ease;
+}
+
+.action-button:hover {
+  transform: translateY(-2px);
+}
+
+.action-button i {
+  font-size: 14px;
+}
+
+/* User Menu Styles */
+.user-menu-container {
+  position: relative;
+}
+
+.user-menu-trigger {
+  cursor: pointer;
+  border-radius: 20px;
+  padding: 0 10px;
+  height: 45px;
+  font-weight: bold;
+  background-image: linear-gradient(rgb(29, 28, 73), rgb(50, 49, 121));
+  display: flex;
+  align-items: center;
+  border: none;
+  color: white;
+}
+
+.profile-image {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+.profile-image-large {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.username {
+  margin: 0 10px;
+  color: #dcdcdc;
+}
+
+.arrow-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 280px;
+  background: linear-gradient(
+    0deg,
+    rgba(25, 24, 62, 1) 0%,
+    rgba(30, 29, 75, 1) 76%,
+    rgba(29, 28, 73, 1) 100%
+  );
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-menu::before {
+  content: '';
+  position: absolute;
+  top: -10px; /* Matches margin-top */
+  left: 0;
+  right: 0;
+  height: 10px;
+  background: transparent;
+}
+
+
+.profile-section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.menu-separator {
+  width: 70%;
+  margin: 18px auto;
+  border: 0;
+  height: 1.8px;
+  background: linear-gradient(to right, #ff8c00, #ff0080);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  color: #dcd9ff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  gap: 20px;
+}
+
+.menu-item:hover {
+  color: #a8a3ff;
+}
+
+.menu-item img {
+  width: 20px;
+  height: 20px;
+}
+
+.logout-button {
+  width: 100%;
+  background: none;
+  border: none;
+  color: #dcd9ff;
+  cursor: pointer;
+  text-align: left;
+  padding: 10px;
+}
+
+/* Wallet Menu Styles */
+.wallet-menu-container {
+  position: relative;
+  display: inline-block;
+}
+
+.wallet-menu-trigger {
+  cursor: pointer;
+  border-radius: 20px;
+  padding: 0 10px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  color: white;
+}
+
+.wallet-dropdown-menu::before {
+  content: '';
+  position: absolute;
+  top: -10px; /* Matches margin-top */
+  left: 0;
+  right: 0;
+  height: 10px;
+  background: transparent;
+}
+
+.wallet-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 250px;
+  background: linear-gradient(
+    0deg,
+    rgba(25, 24, 62, 1) 0%,
+    rgba(30, 29, 75, 1) 76%,
+    rgba(29, 28, 73, 1) 100%
+  );
+  border-radius: 20px;
+  padding: 20px;
+  pointer-events: auto; /* Ensures menu is clickable */
+  z-index: 1000;
+}
+
+.balance-info-compact {
+  cursor: pointer;
+  background-color: #16171a;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.balance-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.wallet-menu-items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.wallet-menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.wallet-item-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.wallet-item-left img {
+  width: 20px;
+  height: 20px;
+}
+
+.wallet-balance {
+  color: #dcd9ff;
+  font-weight: bold;
+}
+
+/* Navigation Styles */
+.tab {
+  display: flex;
+  gap: 10px;
+}
+
+.tab-item {
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  text-decoration: none;
+  color: white;
+}
+
+.tab-item.active, .tab-item:hover {
+  border-bottom: 2px solid white;
+}
+
+@media screen and (max-width: 768px) {
+  .main-header {
+    padding: 0 10px;
+  }
+
+  .action-button {
+    padding: 8px 12px;
+    font-size: 15px;
+  }
+
+  .user-menu-trigger {
+    padding: 0 5px;
+  }
+
+  .dropdown-menu,
+  .wallet-dropdown-menu {
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 339px) {
+  .deposit-btn {
+    display: none;
+  }
+}

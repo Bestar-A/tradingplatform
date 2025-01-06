@@ -1,0 +1,34 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #191a1b;
+  color: white;
+}
+.trading-panel {
+  margin-top: 72px;
+}
+.main-content {
+  position: relative;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.tabcontent {
+  display: block;
+  border-radius: 3px;
+  margin: 68px 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .main-content {
+    padding: 10px;
+  }
+}
+
+.limit-order-section {
+  gap: 10px;
+  display: flex;
+  flex-flow: column;
+}

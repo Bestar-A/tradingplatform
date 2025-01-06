@@ -1,0 +1,130 @@
+/* src/components/common/AssetSelector/styles.css */
+.custom-dropdown {
+  position: relative;
+}
+
+.custom-dropdown-selected {
+  min-height: 50px;
+  transition: background-color 0.2s ease;
+}
+
+.custom-dropdown-selected:hover {
+  background-color: #2d2a6b;
+}
+
+.selected-asset,
+.selected-asset-default {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding-bottom: 2px;
+}
+
+.crypto-icon-small {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.crypto-icon-small img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.money-type {
+  color: #888;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.money-value {
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: monospace;
+}
+
+.percent-plus,
+.percent-minus {
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.custom-dropdown-options {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  background-color: #1d1c49;
+  border-radius: 8px;
+  padding: 4px;
+  z-index: 100;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  max-height: 300px;
+  overflow-y: auto;
+  animation: dropdownFadeIn 0.2s ease;
+}
+
+.dropdown-option {
+  padding: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.dropdown-option:hover {
+  background-color: #0a0a19;
+}
+
+@keyframes dropdownFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scrollbar styles */
+.custom-dropdown-options::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-dropdown-options::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 3px;
+}
+
+.custom-dropdown-options::-webkit-scrollbar-thumb {
+  background: #1a1a1a;
+  border-radius: 3px;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .custom-dropdown-selected {
+    padding: 8px 12px;
+    min-height: 50px;
+  }
+
+  .crypto-icon-small {
+    width: 36px;
+    height: 36px;
+  }
+
+  .money-type,
+  .money-value {
+    font-size: 13px;
+  }
+}

@@ -1,0 +1,38 @@
+.price-ticker-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.price-ticker{
+  background-color: #16171a;
+}
+
+.asset-type {
+  color: #888;
+  font-weight: 500;
+}
+
+.price-value {
+  color: #fff;
+  font-weight: bold;
+}
+
+.price-percent {
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 0.9em;
+  font-weight: 500;
+}
+
+.percent-plus {
+  color: #2fda65;
+  background-color: rgba(47, 218, 101, 0.1);
+}
+
+.percent-minus {
+  color: #ff4d4d;
+  background-color: rgba(255, 77, 77, 0.1);
+}
